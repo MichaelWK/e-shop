@@ -3,8 +3,8 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "GraphQL Shop", template: "%s · GraphQL Shop" },
-  description: "E-commerce demo built with Next.js, GraphQL and Prisma.",
+  title: { default: "E-Shop" },
+  description: "E-shop demo built with Next.js, GraphQL and Prisma.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
