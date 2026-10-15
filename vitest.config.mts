@@ -3,7 +3,16 @@ import { defineConfig } from "vitest/config";
 
 export default defineConfig({
   resolve: {
-    alias: { "@": path.resolve(import.meta.dirname, "src") },
+    alias: [
+      {
+        find: "@",
+        replacement: path.resolve(import.meta.dirname, "src"),
+      },
+      // Load ONE copy of graphql (CommonJS) everywhere.
+      // Without this, tests mix index.mjs and index.js
+      // and fail with "from another module or realm".
+      { find: /^graphql$/, replacement: "graphql/index.js" },
+    ],
   },
   test: {
     environment: "node",

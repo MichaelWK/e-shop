@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   images: {
-    // Seed data uses placeholder images from picsum.photos.
     remotePatterns: [{ protocol: "https", hostname: "picsum.photos" }],
   },
 };
