@@ -3,7 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "E-Shop" },
+  title: "eshop",
   description: "E-shop demo built with Next.js, GraphQL and Prisma.",
 };
 
