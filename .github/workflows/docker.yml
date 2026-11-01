@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v4
 
       # BuildKit builder (needed for the cache)
-      - uses: docker/setup-buildx-action@v3
+      - uses: docker/setup-buildx-action@v4
 
       # log in only when we will push
       - name: Log in to GHCR
